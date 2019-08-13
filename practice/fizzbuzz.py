@@ -20,3 +20,6 @@ class FizzBuzz:
         self.x = x
         if self.x % self.m == 0:
             return "Fizz"
+
+        if self.x % self.n == 0:
+            return "Buzz"
