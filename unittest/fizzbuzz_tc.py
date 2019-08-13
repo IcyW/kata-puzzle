@@ -35,6 +35,11 @@ class MyTestCase(unittest.TestCase):
         fb = FizzBuzz(3, 5)
         self.assertEqual(fb.say(53), "FizzBuzz")
 
+    def test_x(self):
+        fb = FizzBuzz(3, 5)
+        x = 107
+        self.assertEqual(fb.say(x), str(x))
+
 if __name__ == '__main__':
     unittest.main()
 
@@ -45,7 +50,6 @@ if __name__ == '__main__':
 Test Cases:
 input: m，n，x
 m=3,n=5
-7、x=102, 102
 8、x=353535353,FizzBuzz
 
 """
