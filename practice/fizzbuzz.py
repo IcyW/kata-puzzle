@@ -18,6 +18,9 @@ class FizzBuzz:
 
     def say(self, x):
         self.x = x
+        if self.x % self.m == 0 and self.x % self.n == 0:
+            return "FizzBuzz"
+
         if self.x % self.m == 0:
             return "Fizz"
 
