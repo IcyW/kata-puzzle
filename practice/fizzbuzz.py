@@ -16,21 +16,31 @@ class FizzBuzz:
         self.n = n
         self.x = 1
 
-    def stringify(self):
-        return str(self.m), str(self.n), str(self.x)
+    def is_fizz(self):
+        if self.x % self.m == 0:
+            return True
+        m_str, x_str = str(self.m),str(self.x)
+        if m_str in x_str:
+            return True
+        return False
+
+    def is_buzz(self):
+        if self.x % self.n == 0:
+            return True
+        n_str, x_str = str(self.n),str(self.x)
+        if n_str in x_str:
+            return True
+        return False
 
     def say(self, x):
         self.x = x
-        if self.x % self.m == 0 and self.x % self.n == 0:
-            return "FizzBuzz"
+        ans = ""
+        if self.is_fizz():
+            ans = "Fizz"
+        if self.is_buzz():
+            ans += "Buzz"
 
-        if self.x % self.m == 0:
-            return "Fizz"
-
-        if self.x % self.n == 0:
-            return "Buzz"
-
-        m_str, n_str, x_str = self.stringify()
-        if m_str in x_str:
-            return "Fizz"
-
+        if not ans:
+            return str(x)
+        else:
+            return ans
