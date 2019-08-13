@@ -7,6 +7,10 @@ class MyTestCase(unittest.TestCase):
         fb = FizzBuzz(3, 5)
         self.assertEqual(fb.say(3), "Fizz")
 
+    def test_fizz_mul(self):
+        fb = FizzBuzz(3, 5)
+        self.assertEqual(fb.say(9), "Fizz")
+
 if __name__ == '__main__':
     unittest.main()
 
@@ -40,7 +44,6 @@ if __name__ == '__main__':
 Test Cases:
 input: m，n，x
 m=3,n=5
-1、x=3,Fizz
 2、x=9,Fizz
 3、x=5,Buzz
 4、x=15,FizzBuzz
