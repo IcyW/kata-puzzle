@@ -16,6 +16,9 @@ class FizzBuzz:
         self.n = n
         self.x = 1
 
+    def stringify(self):
+        return str(self.m), str(self.n), str(self.x)
+
     def say(self, x):
         self.x = x
         if self.x % self.m == 0 and self.x % self.n == 0:
@@ -26,3 +29,8 @@ class FizzBuzz:
 
         if self.x % self.n == 0:
             return "Buzz"
+
+        m_str, n_str, x_str = self.stringify()
+        if m_str in x_str:
+            return "Fizz"
+
